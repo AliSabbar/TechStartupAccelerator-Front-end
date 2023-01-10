@@ -22,20 +22,8 @@ class SharedHelper {
     return await sharedPreferences!.setDouble(key, value);
   }
 
-  //   static Future<bool?> saveData({
-  //   required bool value,
-  //   required String key,
-  // }) async {
-  //    return await sharedPreferences?.setBool(key, value);
-  // }
 
 // Get Data
-
-  // static bool? getData({
-  //   required String key,
-  // })  {
-  //   return sharedPreferences!.getBool(key);
-  // }
 
   static dynamic getData({
     required String key,
