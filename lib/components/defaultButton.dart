@@ -4,6 +4,8 @@ import '../style/colors.dart';
 
 Widget defaultButton({
   required VoidCallback onTab,
+  double width = 348.93,
+  double hight = 48,
 }){
   return MaterialButton(
       shape: RoundedRectangleBorder(
@@ -12,8 +14,8 @@ Widget defaultButton({
       onPressed: onTab,
       textColor: Colors.white,
       color: primaryColor,
-      minWidth: 348.93,
-      height: 48,
+      minWidth: width,
+      height: hight,
       child: const Text(
         "Search",
         style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),

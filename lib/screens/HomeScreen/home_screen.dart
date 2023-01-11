@@ -26,7 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     var prov = context.watch<HomeProvider>();
@@ -59,8 +58,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             Icons.wb_sunny_outlined,
                             size: 30,
                           )
-                        : SvgPicture.asset('assets/images/moon.svg',width: 25,)
-                          ),
+                        : SvgPicture.asset(
+                            'assets/images/moon.svg',
+                            width: 25,
+                          )),
               ),
             ],
           ),
@@ -73,11 +74,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   children: [
                     Text("Find your ideal home !",
-                        style:
-                            Theme.of(context).textTheme.bodyText1!.copyWith(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                )),
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                            )),
                   ],
                 ),
 
@@ -92,9 +92,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 20,
                 ),
 
-                defaultButton(onTab: () {
-                  prov.searchItem(data: prov.searchController.text);
-                }),
+                defaultButton(
+                    onTab: () {
+                      prov.searchItem(data: prov.searchController.text);
+                    },
+                    width: double.infinity),
 
                 const SizedBox(
                   height: 30,
@@ -119,8 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     height: 40,
                                   );
                                 },
-                                itemBuilder:
-                                    (BuildContext context, int index) {
+                                itemBuilder: (BuildContext context, int index) {
                                   return defaultItem(
                                     post: prov.posts[index],
                                     context: context,
