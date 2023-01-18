@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:housen/providers/dark_theme_provider.dart';
 import 'package:housen/providers/home_provider.dart';
 import 'package:housen/screens/HomeScreen/home_screen.dart';
+import 'package:housen/screens/splashScreen/splash_screen.dart';
 import 'package:housen/style/colors.dart';
 import 'package:housen/style/themes.dart';
 import 'package:provider/provider.dart';
@@ -33,7 +34,10 @@ class MyApp extends StatelessWidget {
           : ThemeMode.light,
       theme: lightTheme,
       darkTheme: darkTheme,
-      home: const HomeScreen(),
+      routes: {
+        'home':(context) => HomeScreen(),
+      },
+      home: const SplashScreen(),
     );
   }
 }
