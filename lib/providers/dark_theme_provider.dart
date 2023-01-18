@@ -17,13 +17,4 @@ class DarkModeProvider extends ChangeNotifier {
     }
   }
 
-  // changeIcon() {
-  //   if (isDark) {
-  //     sunnyDark = Icons.sunny;
-  //     notifyListeners();
-  //   } else {
-  //     sunnyDark = Icons.dark_mode_outlined;
-  //     notifyListeners();
-  //   }
-  // }
 }
